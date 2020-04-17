@@ -6,9 +6,11 @@
     </div>
     <div class="card-body">
       <router-link :to="'/product/' + item.id" tag="h5" class="card-title"><a>{{ item.title }}</a></router-link>
-      <h6 class="card-subtitle mb-2 remain">{{ item.quantity }} в наличии</h6>
+  <p class="card-text truncate">{{ item.description | shortDescription}}</p>
 
-      <p class="card-text truncate">{{ item.description | shortDescription}}</p>
+      <router-link :to="'/category/' + item.id" tag="h8" class="category-title"><a>{{ item.category }}</a></router-link>
+ <h6 class="card-subtitle mb-2 remain">{{ item.quantity }} в наличии</h6>
+
 
       <div class="row">
         <p class="col-6 lead">Р{{ item.price }}</p>
