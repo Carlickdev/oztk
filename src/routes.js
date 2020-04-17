@@ -10,5 +10,6 @@ export const routes = [
 	{path: '/cart', component: ShoppingCart, name: 'shoppingcart'},
 	{path: '/login', component: Login, name: 'login', onlyGuest: true },
 	{path: '/register', component: Register, name: 'register', onlyGuest: true},
-	{path: '*', redirect: '/' }
+	{path: '*', redirect: '/' },
+{path: '/:category', component: Store, name: 'category'},
 ];
