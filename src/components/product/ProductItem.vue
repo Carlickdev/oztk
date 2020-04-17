@@ -8,7 +8,7 @@
       <router-link :to="'/product/' + item.id" tag="h5" class="card-title"><a>{{ item.title }}</a></router-link>
   <p class="card-text truncate">{{ item.description | shortDescription}}</p>
 
-      <router-link :to="'/category/' + item.id" tag="h8" class="category-title"><a>{{ item.category }}</a></router-link>
+      <router-link :to="'/category/' + item.categoryid" tag="h8" class="category-title"><a>{{ item.categorynames }}</a></router-link>
  <h6 class="card-subtitle mb-2 remain">{{ item.quantity }} в наличии</h6>
 
 
