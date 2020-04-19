@@ -21,3 +21,49 @@
     height: 100%;
   }
 }
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  align-items: center;
+  justify-content: space-between; // space out brand from logo
+  padding: $navbar-padding-y $navbar-padding-x;
+  background:#000;
+  color:#fff;
+    }
+.bucket{
+  text-align:center;
+}
+  .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    text-align:center;
+  }
+  .navbar-toggler {
+  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+  @include font-size($navbar-toggler-font-size);
+  line-height: 1;
+  background-color: white; // remove default button style
+  border: $border-width solid transparent; // remove default button style
+  @include border-radius($navbar-toggler-border-radius);
+  @include hover-focus() {
+    text-decoration: none;
+     background-color:gray;
+  }
+}
+
+// Keep as a separate element so folks can easily override it with another icon
+// or image file as needed.
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  font-size:auto;
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+.navbar-toggler-icon:hover{
+  
+}
