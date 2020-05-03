@@ -2,13 +2,13 @@
 npm install
 
 
-#запуск сервера
+#РЎР±РѕСЂРєР° Рё Р·Р°РїСѓСЃРє СЃРµСЂРІРµСЂР°
 npm run build && npm run serve
-#установка субд cli
+#РЈСЃС‚Р°РЅРѕРІРєР° РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ firebase
 npm install -g firebase-tools
-#соединение и авторизация
+#Р°РІС‚РѕСЂРёР·Р°С†РёСЏ firebase
 firebase login
-#Инициализация проекта
+#
 firebase init
 
   apiKey: " AIzaSyBBaDdgZZkWDkQO8YuiLmThNDYOp5PApyU",
