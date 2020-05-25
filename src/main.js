@@ -1,48 +1,32 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import './registerServiceWorker'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import NProgress from 'nprogress'
 
-import { routes } from './routes';
-import store from './stores/store';
-import { firebaseListener } from './config/firebaseConfig';
-import './assets/styles/app.scss'
+// require styles
+import 'swiper/dist/css/swiper.css'
+import '../node_modules/nprogress/nprogress.css'
 
-import App from './App.vue';
+Vue.use(VueAwesomeSwiper)
 
-Vue.use(VueRouter);
+Vue.config.productionTip = false
 
+router.beforeResolve((to, from, next) => {
+  if (to.name) {
+    NProgress.start()
+  }
+  next()
+})
 
-
-firebaseListener(authStatusChange);
-
-
-const router = new VueRouter({
-	mode: 'history',
-	routes
-
-});
-
-// router.beforeEach((to, from, next) => {
-//     if (to.onlyGuest && store.getters.isLoggedIn) {
-//         next('/');
-//     } else {
-//         next();
-//     }
-// });
-
-
-new Vue({
-  el: '#app',
+router.afterEach(() => {
+  NProgress.done()
+})
+// eslint-disable-next-line no-unused-vars
+let vm = new Vue({
   router,
   store,
   render: h => h(App)
-})
-
-function authStatusChange(loggedIn, user) {
-	if (store) {
-		store.commit('AUTH_STATUS_CHANGE');
-		if (user) {
-			store.dispatch('getShoppingCart', {uid: user.uid, currentCart: store.getters.cartItemList});
-		}
-	}
-
-}
+}).$mount('#app')
