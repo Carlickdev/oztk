@@ -1,5 +1,6 @@
 <template>
 <div class="container table-responsive">
+<!-- Таблица -->
   <table id="cart" class="table table-hover table-sm">
     <thead>
       <tr>
@@ -21,6 +22,8 @@
       </tr>
       <tr>
         <td>
+        
+        <!-- Кнопка возврата на главную--!>
           <button class="btn btn-warning" @click="saveShoppingCartLocal">
 							<i class="fa fa-angle-left"></i> Сохранить и продолжить покупки
 						</button>
@@ -28,6 +31,7 @@
         <td colspan="2" class="d-none d-sm-table-cell"></td>
         <td class="d-none d-sm-table-cell text-center"><strong>Итого Р {{ cartValue }}</strong></td>
         <td class="px-0">
+        <!-- Кнопка покупки -->
           <button class="btn btn-success" @click="checkout">
 							<span class="text-nowrap">Продолжить <i class="fa fa-angle-right d-inline"></i></span>
 					</button>

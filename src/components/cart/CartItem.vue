@@ -18,8 +18,9 @@
 				@input="updateQuantity"
 				min="0">
 		</td>
-		<td data-th="Subtotal" class="text-center">${{ subtotal }}</td>
+		<td data-th="Subtotal" class="text-center">P{{ subtotal }}</td>
 		<td class="actions" data-th="">
+		<!-- Кнопка удаления товара из корзины --!>
 			<button class="btn btn-danger btn-sm" @click="removeItem"><i class="fa fa-trash-o"></i></button>
 		</td>
 	</tr>

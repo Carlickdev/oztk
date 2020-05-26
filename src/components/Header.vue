@@ -17,8 +17,8 @@
 
     <div class="collapse navbar-collapse" id="navbarTop" :class="{show: isNavOpen}">
       <ul class="navbar-nav mr-auto">
-      <li class="li-pointer nav-item"><a class="nav-link category"> Одежда</a></li>
-      <li class="li-pointer nav-item"><a class="nav-link category"> Оборудование</a></li>
+
+
         </ul>
       <ul class="nav navbar-nav">
 
@@ -92,10 +92,7 @@ export default {
 .li-pointer:hover {
   cursor: pointer;
 }
-.category{
-  cursor:pointer;
-  margin-left:15px;
-}
+
 
 
 </style>

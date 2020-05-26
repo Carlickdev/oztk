@@ -1,17 +1,19 @@
 <template>
 <div class="d-flex flex-column sticky-footer-wrapper">
     <main class="flex-fill">
+             <!-- Header -->
       <app-header></app-header>
+          <!-- Центральная часть -->
       <message-component></message-component>
       <div class="container mt-3">
           <div class="row">
-            <div class="col-md-12">
+             <div class="col-md-12"> 
               <router-view></router-view>
            </div>
           </div>
       </div>
     </main>
-
+<!-- Footer -->
     <footer class="navbar-default navbar-bottom navbar-dark bg-dark">
       <div class="container-fluid">
             <p class="text-center nav-bar mb-0">Product by <a href="#" target="_blank">

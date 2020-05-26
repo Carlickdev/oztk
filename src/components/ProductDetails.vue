@@ -17,10 +17,10 @@
         <h4 class="pull-right">P {{ item.price }}</h4>
         <h4> {{ item.title }}</h4>
         <p> {{ item.description }} </p>
-        <p>{{item.category}}</p>
+       
       </div>
       <div class="ratings">
-        <span>{{ item.quantity }} осталось</span>
+ 
         <p class="pull-right">
           <button @click="addItem" :disabled="item.quantity === 0" class="btn btn-success">
                             Добавить в корзину

@@ -8,12 +8,9 @@
       <router-link :to="'/product/' + item.id" tag="h5" class="card-title"><a>{{ item.title }}</a></router-link>
   <p class="card-text truncate">{{ item.description | shortDescription}}</p>
 
-      <router-link :to="'/category/' + item.categoryid" tag="h8" class="category-title"><a>{{ item.categorynames }}</a></router-link>
- <h6 class="card-subtitle mb-2 remain">{{ item.quantity }} в наличии</h6>
-
-
       <div class="row">
         <p class="col-6 lead">Р{{ item.price }}</p>
+                    
         <p class="col-6">
           <button class="btn btn-success pull-right" :disabled="item.quantity === 0" @click="addItem">
              В корзину
