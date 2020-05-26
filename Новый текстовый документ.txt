@@ -1,0 +1,20 @@
+# install dependencies
+npm install
+
+
+#Сборка и запуск сервера
+npm run build && npm run serve
+#Установка инструментов firebase
+npm install -g firebase-tools
+#авторизация firebase
+firebase login
+#
+firebase init
+
+  apiKey: " AIzaSyBBaDdgZZkWDkQO8YuiLmThNDYOp5PApyU",
+  authDomain: "vue-oztk.firebaseapp.com",
+  databaseURL: "https://vue-oztk.firebaseio.com/"
+
+  apiKey: "AIzaSyAvE8yZMbjt6Y799fAHFOOJ-WhjdwGfK6A",
+  authDomain: "vuejs-shopping-cart.firebaseapp.com",
+  databaseURL: "https://vuejs-shopping-cart.firebaseio.com/"
