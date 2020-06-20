@@ -23,7 +23,7 @@
       <tr>
         <td>
         
-        <!-- Кнопка возврата на главную--!>
+        
           <button class="btn btn-warning" @click="saveShoppingCartLocal">
 							<i class="fa fa-angle-left"></i> Сохранить и продолжить покупки
 						</button>
